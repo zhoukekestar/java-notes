@@ -9,7 +9,7 @@ Java Notes。虽然是个前端，但之前也接触过java，所以，就当复
 * `SpringBootHelloWorld`: 使用`Spring Boot`框架，用`maven`构建的`HelloWorld`项目
 * `SpringBootHelloWorld-Gradle`: 使用`Spring Boot`框架，用`gradle`构建的`HelloWorld`项目
 * `MyBatisHelloWorld`: 使用`mybatis`框架编写的`HelloWorld`项目
-
+*  `SpringBoot-Mybatis`: 未完成
 # 需要了解的
 * io
 * 网络编程
