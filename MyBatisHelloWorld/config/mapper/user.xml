@@ -4,7 +4,7 @@
 
 <mapper namespace="mapper.user">
 
-	<select id="getNameByID" resultType="io.github.zhoukekestar.beans.User">
+	<select id="getUserByID" resultType="io.github.zhoukekestar.model.User">
   	SELECT * FROM user WHERE ID = #{id}
 	</select>
 </mapper>

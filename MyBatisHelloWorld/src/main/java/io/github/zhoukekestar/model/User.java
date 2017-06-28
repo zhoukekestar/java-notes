@@ -1,4 +1,4 @@
-package io.github.zhoukekestar.beans;
+package io.github.zhoukekestar.model;
 
 public class User {
 	private int id;

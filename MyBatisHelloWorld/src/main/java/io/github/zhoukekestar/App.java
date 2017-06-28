@@ -9,7 +9,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
-import io.github.zhoukekestar.beans.User;
+import io.github.zhoukekestar.model.User;
 
 /**
  * Hello world!
@@ -24,7 +24,7 @@ public class App {
 		sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
 
 		SqlSession session = sqlSessionFactory.openSession();
-		User name = session.selectOne("mapper.user.getNameByID", 2);
+		User name = session.selectOne("mapper.user.getUserByID", 2);
 
 		System.out.println("Hello " + name.getName() + "!");
 	}
