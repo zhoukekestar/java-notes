@@ -21,15 +21,15 @@ Java Notes。虽然是个前端，但之前也接触过java，所以，就当复
 
   * `mybatis-config.xml` 元素的声明循序必须按照
     ```
-    properties?,settings?,typeAliases?,typeHandlers?,objectFactory?,objectWrapperFactory?,plugins?,environments?,databaseIdProvider?,mappers?)的顺序写
+    properties?,settings?,typeAliases?,typeHandlers?,objectFactory?,objectWrapperFactory?,plugins?,environments?,databaseIdProvider?,mappers?
     ```
 
     ```xml
     <!-- 这样是可以的 -->
     <configuration>
-    	<properties resource="config.properties"></properties>
+      <properties resource="config.properties"></properties>
 
-    	<typeAliases></typeAliases>
+      <typeAliases></typeAliases>
     </configuration>
 
     <!-- 这样是不可以的，会报错 -->
@@ -39,8 +39,38 @@ Java Notes。虽然是个前端，但之前也接触过java，所以，就当复
       <properties></properties>
     </configuration>
     ```
+* `CustomAnnotation`: 自定义注解
+  * 方法名注解样例
+  * 方法参数注解样例
 
-# 需要了解的
+    ```java
+    @AutoRun(times = 3)
+    public static void showMsgThreeTimes() {
+      System.out.println("AutoRun showMsgThreeTimes!");
+    }
+
+    @AutoRun
+    public static void showSingleMsg() {
+      System.out.println("AutoRun showSingleMsg!");
+    }
+
+    public void showEmail(@Email String email) {
+      System.out.println("email :" + email);
+    }
+
+    /* 输出
+    AutoRun showSingleMsg!
+    AutoRun showMsgThreeTimes!
+    AutoRun showMsgThreeTimes!
+    AutoRun showMsgThreeTimes!
+    Jun 28, 2017 7:45:35 PM org.hibernate.validator.internal.util.Version <clinit>
+    INFO: HV000001: Hibernate Validator 5.2.4.Final
+    values:email size: 0 msg:
+    values:abc size: 1 msg:Email is invalid.
+    */
+    ```
+
+# 一些概念
 * DAO
 
   查看Stackoverflow上的回答: [data-access-object-dao-in-java](https://stackoverflow.com/questions/19154202/data-access-object-dao-in-java)
@@ -55,6 +85,3 @@ Java Notes。虽然是个前端，但之前也接触过java，所以，就当复
 * DI
   * 主要目的
 * 反射
-* 注解
-  * 能做什么
-  * 不能做什么
