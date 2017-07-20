@@ -146,3 +146,7 @@ Java Notes。虽然是个前端，但之前也接触过java，所以，就当复
 * IO
 * 网络编程
 * 多线程
+
+## 不错的学习资料
+* [SpringBoot-Learning](https://github.com/dyc87112/SpringBoot-Learning)
+* [springboot-learning-example](https://github.com/JeffLi1993/springboot-learning-example)
